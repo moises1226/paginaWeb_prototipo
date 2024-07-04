@@ -1,1 +1,1 @@
-ESTE es mi archivo del tp1
+Prototipo de pagina web, con algunos conceptos entendidos de Js, Css, Html5
