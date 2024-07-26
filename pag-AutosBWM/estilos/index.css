@@ -6,8 +6,6 @@
 }
 
 body {
-    position: relative;
-    min-height: 100vh;
     display: flex;
     flex-direction: column; /* Asegura que el contenido se apile verticalmente */
 }
@@ -106,7 +104,7 @@ main {
 .dropDown {
     position: absolute;
     height: 100%;
-    background-color: rgb(190, 255, 255);
+    background-color: rgb(223, 255, 255);
     width: 300px;
     transform: translateX(0); /* Comienza en su posición original */
     opacity: 1; /* Comienza visible */
@@ -114,7 +112,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top-right-radius: 20px;
+    overflow: hidden;
     
 
 
@@ -129,51 +127,68 @@ main {
 }
 .contentDropDown a{
 
-    margin: 80px;
+    margin: 70px;
     text-decoration: none;
     color: rgb(red, green, blue);
+    font-size: 18px;
+    font-weight: bold;
 }
 
 #salir{
  
   
     position: absolute;
-    width: 40px;
-    height: 40px;   
-    left: 87%;
+    width: 35px;
+    height: 35px;   
+    left: 265px;
     top: 0;
-    border-top-right-radius: 20px;
+
     background-color: rgb(4, 54, 99);
     border: 0px;
     color: rgb(255,255,255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
 }
 
-.salida{
+#salir .y , #salir .x{
+    cursor: pointer;
+}
 
-    content: "";
+
+
+.y{
+    
+    position: absolute;
+    background: black;
+    width: 4px;
+    height: 25px;
+    transform: rotate(-45deg);
+   
+}
+
+.x{
+
+     
+    position: absolute;
+    background: black;
+    width: 4px;
+    height: 25px;
+    transform: rotate(45deg);
     
 
-
 }
 
-.salir::before{
-    content: "";
-    position: absolute;
-    background-color: black;
-    width: 3px;
-    height: 7px;
-    transform: rotate(20px);
-    
-
-
-}
-.salir::after{
-    content: "";
-    position: absolute;
-    background-color: black;
-    width: 3px;
-    height: 7px;
-    transform: rotate(20px);
-
-
+/* Agrega esto al final de tu archivo CSS */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+    display: none; /* Oculto por defecto */
+    z-index: 1; /* Asegúrate de que esté encima del contenido */
 }
