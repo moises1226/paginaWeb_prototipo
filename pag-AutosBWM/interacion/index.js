@@ -17,4 +17,5 @@ salir.addEventListener('click', function() {
     dropDown.style.transform = "translateX(-100%)"; // Mueve el elemento a la izquierda
     dropDown.style.opacity = "0"; // Hace que el elemento sea invisible
     overlay.style.display = 'none'; // Oculta el overlay
+    body.style.overflow = 'visible';
 });
